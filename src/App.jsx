@@ -1,30 +1,24 @@
-import "./app.css";
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SimpleNavbar from './Components/NavBar';
-import { HeroSection } from './Components/HeroSection';
-import { CarouselCustomNavigation } from './Components/HeroCrousel';
 import { Footer } from './Components/Footer';
-import AboutGdg from './Components/AboutGdg';
-import UpcomingEvents from './Components/UpcomingEvents'; // Import the UpcomingEvents component
-import PastEvents from './Components/PastEvents'; // Import the UpcomingEvents component
-import Organizers from "./Components/Organizers";
-import CommunityPartners from "./Components/CommunityPartners";
-import { ImageGallery } from "./Components/ImageGallery";
+import HomePage from './Pages/HomePage';
+import Team from './Pages/Team'; // Import the Team page
+import Gallery from './Pages/Gallery';
 
 function App() {
   return (
-    <div>
-      <SimpleNavbar/> 
-      <CarouselCustomNavigation /> 
-      <HeroSection/>
-      <AboutGdg/>
-      <UpcomingEvents/> 
-      <PastEvents/>  
-      <Organizers/>
-      <CommunityPartners/>
-      <ImageGallery/>
-      <Footer/>
-    </div>
+    <Router>
+      <div className="max-w-screen-3xl mx-auto px-4 md:px-10 xl:px-32 bg-gray-100">
+        <SimpleNavbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/team" element={<Team />} /> 
+          <Route path="/gallery" element={<Gallery />} /> 
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

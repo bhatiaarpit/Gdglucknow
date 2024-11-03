@@ -48,16 +48,16 @@ const eventsData = [
 
 function UpcomingEvents() {
   return (
-    <section className="py-12 px-8 max-w-7xl mx-auto">
+    <section className="py-12 max-w-7xl mx-auto" id='upcomingevents'>
       <h2 className="text-3xl font-bold text-slate-800 mb-8">Upcoming Events</h2>
       {eventsData.length > 4 ? (
         <Splide
           options={{
             type: 'loop',
-            perPage: 4,
+            perPage: 2,
             gap: '1rem',
             breakpoints: {
-              1024: { perPage: 3 },
+              1024: { perPage: 2 },
               768: { perPage: 2 },
               480: { perPage: 1 },
             },

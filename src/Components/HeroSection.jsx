@@ -4,7 +4,7 @@ import { IconButton } from "@material-tailwind/react";
 
 export function HeroSection() {
   return (
-    <div className="flex flex-col items-center justify-center text-center py-16 bg-gray-100">
+    <div className="flex flex-col items-center justify-center text-center py-16 ">
       <h1 className="text-4xl font-bold text-blue-gray-900 mb-6">
         Google Developer Group Lucknow
       </h1>

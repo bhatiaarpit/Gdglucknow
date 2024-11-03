@@ -24,7 +24,7 @@ const pastEventsData = [
 
 function PastEvents() {
   return (
-    <section className="py-12 px-8 max-w-7xl mx-auto">
+    <section id='pastevents' className="py-12 px-8 max-w-7xl mx-auto">
       <h2 className="text-3xl font-bold text-slate-800 mb-8">Past Events</h2>
       {pastEventsData.length > 4 ? (
         <Splide
